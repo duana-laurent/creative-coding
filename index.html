@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Arrays & Loops </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Arrays and Loops</h1>
+                <p id="output">
+
+                </p>
+
+                <p id="arrayLength">
+
+                </p>
+
+                <p id="arrayConcat">
+
+                </p>
+
+                <p id="popArray">
+
+                </p>
+
+                <p id="pushArray">
+
+                </p>
+
+                <p id="sortedCars">
+
+                </p>
+
+                <p id="reverseSort">
+
+                </p>
+
+                <p id="loopTest">
+
+                </p>
+
+                <p id="whileTest">
+
+                </p>
+
+                <h2 id="dessertLoop">
+
+                </h2>
+
+                <h2 id="favoriteDessert"></h2>
+
+                <h2 id="fullName"></h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad dolorum eaque ea, aliquam qui, soluta rem expedita esse mollitia facere suscipit dolore asperiores dolorem? Fugit quod ea saepe dolorem.</p>
+                <p>Laboriosam nostrum in debitis aspernatur nulla repudiandae maiores, mollitia eaque rerum dicta libero magni similique perferendis dolorum accusamus dolore eum aliquam, ad facilis? Sed, dolor! Blanditiis quia molestiae eveniet soluta!</p>
+                <p>Illo corporis laudantium assumenda nesciunt maxime deserunt repellat cumque autem sed. Officia at quam ab ex. Aliquid libero error harum voluptatum quae voluptates minima voluptate nulla perspiciatis, placeat deserunt praesentium.</p>
+                <p>Nisi aliquam dicta incidunt quo quisquam possimus reprehenderit eius totam, quam exercitationem velit perferendis magni eos! Dolores autem aliquid, minus aperiam laborum distinctio facere laudantium ea recusandae temporibus voluptatum dignissimos.</p>
+                <p>Perferendis expedita quaerat voluptatem alias error reiciendis voluptatum cupiditate! Laborum quas perspiciatis dolores quam quo nobis, cumque illum, vitae, consequuntur et omnis quod? Tempora ullam ipsam quas, provident vel quia!</p>
+                <p>Quibusdam consectetur hic, nihil itaque illum nisi et magnam consequuntur ullam a alias. Dolorum consectetur suscipit magni ducimus aspernatur? Delectus eum praesentium voluptas nobis quod vitae, ratione deserunt perferendis ducimus.</p>
+                <p>Amet magnam velit, officiis, minima similique earum facere error repellendus quae, doloribus in exercitationem. Ipsam esse, quasi ullam ab corrupti, necessitatibus dolore eius officia voluptas cum labore voluptatem distinctio quia!</p>
+                <p>Repudiandae, repellat. Laborum voluptas voluptate odio. Soluta, maiores eveniet pariatur nulla minima dolorum? Dolorum, quibusdam temporibus. Tempore rerum blanditiis cupiditate, iure hic minima, excepturi reiciendis repellat facere unde, maiores enim?</p>
+                <p>Culpa non corrupti quia accusamus ex, esse voluptate, doloremque dolorum accusantium nostrum voluptatem? Recusandae odit voluptatibus dicta harum delectus veniam alias! Vero accusamus sit, voluptates facere deserunt pariatur autem eligendi.</p>
+                <p>Sequi praesentium incidunt suscipit dicta, mollitia amet ut libero quae! Ipsam minima error neque rem aut laudantium culpa eveniet accusamus dicta velit nesciunt et, iste possimus voluptate enim sit architecto.</p>
+        
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        //Declaring arrays
+        var cars = ["Ford", "Chevy", "GMC", "Toyota", "Tesla", "Honda", "Hyundai", "Mazda"];
+        var americanCars = ["Ford", "Chevy", "GMC"];
+        var koreanCars = ["Hyundai", "Kia", "Genesis"];
+
+        //Accessing array elements
+        document.getElementById("output").innerHTML = cars[2];
+
+        //checking the length of an array
+        document.getElementById("arrayLength").innerHTML = cars.length;
+
+        //concatting 2 arrays
+        let favoriteCars = americanCars.concat(koreanCars);
+        document.getElementById("arrayConcat").innerHTML = favoriteCars;
+
+        favoriteCars.pop();
+        document.getElementById("popArray").innerHTML = favoriteCars;
+    
+        favoriteCars.push("Porsche");
+        document.getElementById("pushArray").innerHTML = favoriteCars;
+
+        favoriteCars.sort();
+        document.getElementById("sortedCars").innerHTML = favoriteCars;
+
+        favoriteCars.reverse();
+        document.getElementById("reverseSort").innerHTML = favoriteCars;
+
+
+        for (i=0; i < 5; i++) {
+            cars.pop([i]);
+            document.getElementById("loopTest").innerHTML = cars;
+        }
+
+        let desserts = ["icecream", "donut", "cake", "danish", "flan", "tart", "pie"]
+        for (i = 0; i < 5; i++) {
+            console.log(desserts[i]);
+            document.getElementById("dessertLoop"). innerHTML = desserts;
+            document.getElementById("favoriteDessert").innerHTML = "My Favorite dessert is " + desserts[4];
+        }
+
+         // Multiplication
+            const number = 8;
+            for (let i = 1; i <= 10; i++) {
+            const result = i * number;
+            console.log(`${i} x ${number} = ${result}`);
+            }
+
+        //loop to add first name to last name
+        var firstName = ["Hannah", "Sarah", "Monique"];
+        var lastName = ["John", "Thomas", "Otto"];
+        let fullName;
+
+        for (let i = 0; i <= 3; i++) {
+            fullName[i] = firstName + " " + lastName;
+            document.getElementById("fullName").innerHTML = fullName;
+        }
+
+        const paragraphs = document.getElementsByTagName('p');
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.color = "blue";
+        }
+
+    </script>
+
+</body>
+
+</html>
